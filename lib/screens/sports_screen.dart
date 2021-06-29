@@ -1,8 +1,8 @@
-import 'package:resepisoman/module/salad/model_salad.dart';
-import 'package:resepisoman/ui/salad_ui.dart';
+import 'package:resepisoman/module/sports/model_sports.dart';
+import 'package:resepisoman/ui/sports_ui.dart';
 import 'package:flutter/material.dart';
 
-class SaladScreen extends StatelessWidget {
+class SportsScreen extends StatelessWidget {
   static String id = "salad";
   SaladUI _ui = SaladUI();
 
@@ -19,12 +19,12 @@ class SaladScreen extends StatelessWidget {
   }
 }
 
-class DetailSalad extends StatelessWidget {
+class DetailSports extends StatelessWidget {
   static String id = "detailSalad";
   SaladUI _ui = SaladUI();
-  ModelSalad ms;
+  ModelSports ms;
 
-  DetailSalad({Key key, @required this.ms}) : super(key: key);
+  DetailSports({Key key, @required this.ms}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

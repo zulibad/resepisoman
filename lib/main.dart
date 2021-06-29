@@ -2,7 +2,7 @@ import 'package:resepisoman/screens/drink_screen.dart';
 import 'package:resepisoman/screens/food_screen.dart';
 import 'package:resepisoman/screens/home_screen.dart';
 import 'package:resepisoman/screens/loading_screen.dart';
-import 'package:resepisoman/screens/salad_screen.dart';
+import 'package:resepisoman/screens/sports_screen.dart';
 import 'package:resepisoman/screens/sides_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -25,9 +25,9 @@ class MyApp extends StatelessWidget {
           return MaterialPageRoute(builder: (context) {
             return DetailFood(mf: settings.arguments);
           });
-        } else if (settings.name == DetailSalad.id) {
+        } else if (settings.name == DetailSports.id) {
           return MaterialPageRoute(builder: (context) {
-            return DetailSalad(ms: settings.arguments);
+            return DetailSports(ms: settings.arguments);
           });
         } else if (settings.name == DetailSides.id) {
           return MaterialPageRoute(builder: (context) {
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.id: (context) => HomeScreen(),
         DrinkScreen.id: (context) => DrinkScreen(),
         FoodScreen.id: (context) => FoodScreen(),
-        SaladScreen.id: (context) => SaladScreen(),
+        SportsScreen.id: (context) => SportsScreen(),
         SidesScreen.id: (context) => SidesScreen()
       },
     );

@@ -1,6 +1,6 @@
-import 'package:resepisoman/module/salad/data_salad.dart';
-import 'package:resepisoman/module/salad/model_salad.dart';
-import 'package:resepisoman/screens/salad_screen.dart';
+import 'package:resepisoman/module/sports/data_sports.dart';
+import 'package:resepisoman/module/sports/model_sports.dart';
+import 'package:resepisoman/screens/sports_screen.dart';
 import 'package:flutter/material.dart';
 
 class SaladUI {
@@ -8,7 +8,7 @@ class SaladUI {
     return ListView.builder(
       itemCount: DataSalad.itemCount,
       itemBuilder: (context, index) {
-        ModelSalad salad = DataSalad.getItemSalad(index);
+        ModelSports salad = DataSalad.getItemSalad(index);
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
@@ -18,7 +18,7 @@ class SaladUI {
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
                 onTap: () {
-                  Navigator.pushNamed(context, DetailSalad.id,
+                  Navigator.pushNamed(context, DetailSports.id,
                       arguments: salad);
                 },
                 title: Text(salad.name,
@@ -37,7 +37,7 @@ class SaladUI {
     );
   }
 
-  Widget buildDetailFood(ModelSalad s, BuildContext context) {
+  Widget buildDetailFood(ModelSports s, BuildContext context) {
     return ListView(
       children: [
         Column(
