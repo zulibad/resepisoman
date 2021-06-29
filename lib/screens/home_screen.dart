@@ -1,7 +1,7 @@
 import 'package:resepisoman/screens/drink_screen.dart';
 import 'package:resepisoman/screens/food_screen.dart';
 import 'package:resepisoman/screens/sports_screen.dart';
-import 'package:resepisoman/screens/sides_screen.dart';
+import 'package:resepisoman/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Container(
               child: GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, SidesScreen.id);
+              Navigator.pushNamed(context, NewsScreen.id);
             },
             child: Container(
               decoration: BoxDecoration(
@@ -150,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
       Container(
         child: GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, SidesScreen.id);
+            Navigator.pushNamed(context, NewsScreen.id);
           },
           child: Container(
             height: 200,

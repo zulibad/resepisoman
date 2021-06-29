@@ -1,8 +1,8 @@
-import 'package:resepisoman/module/sides/model_sides.dart';
-import 'package:resepisoman/ui/sides_ui.dart';
+import 'package:resepisoman/module/news/model_news.dart';
+import 'package:resepisoman/ui/news_ui.dart';
 import 'package:flutter/material.dart';
 
-class SidesScreen extends StatelessWidget {
+class NewsScreen extends StatelessWidget {
   static String id = "sides";
   SidesUI _ui = SidesUI();
 
@@ -19,12 +19,12 @@ class SidesScreen extends StatelessWidget {
   }
 }
 
-class DetailSides extends StatelessWidget {
+class DetailNews extends StatelessWidget {
   static String id = "detailSides";
   SidesUI _ui = SidesUI();
-  ModelSides ms;
+  ModelNews ms;
 
-  DetailSides({Key key, @required this.ms}) : super(key: key);
+  DetailNews({Key key, @required this.ms}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

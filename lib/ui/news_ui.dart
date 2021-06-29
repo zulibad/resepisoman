@@ -1,6 +1,6 @@
-import 'package:resepisoman/module/sides/data_sides.dart';
-import 'package:resepisoman/module/sides/model_sides.dart';
-import 'package:resepisoman/screens/sides_screen.dart';
+import 'package:resepisoman/module/news/data_news.dart';
+import 'package:resepisoman/module/news/model_news.dart';
+import 'package:resepisoman/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 
 class SidesUI {
@@ -8,7 +8,7 @@ class SidesUI {
     return ListView.builder(
       itemCount: DataSides.itemCount,
       itemBuilder: (context, index) {
-        ModelSides sides = DataSides.getItemSides(index);
+        ModelNews sides = DataSides.getItemSides(index);
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
@@ -18,8 +18,7 @@ class SidesUI {
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
                 onTap: () {
-                  Navigator.pushNamed(context, DetailSides.id,
-                      arguments: sides);
+                  Navigator.pushNamed(context, DetailNews.id, arguments: sides);
                 },
                 title: Text(sides.name,
                     style: TextStyle(fontWeight: FontWeight.bold)),
@@ -37,7 +36,7 @@ class SidesUI {
     );
   }
 
-  Widget buildDetailFood(ModelSides s, BuildContext context) {
+  Widget buildDetailFood(ModelNews s, BuildContext context) {
     return ListView(
       children: [
         Column(
